@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 recipes_ctx = {
     "recipes": [
@@ -66,5 +65,36 @@ recipes_ctx = {
     ]
 }
 
+recipe_one_ctx = {
+    "name": "Recipe 1",
+    "ingredients": [
+        {
+            "name": "tomato",
+            "quantity": "3pcs"
+        },
+        {
+            "name": "onion",
+            "quantity": "1pc"
+        },
+        {
+            "name": "pork",
+            "quantity": "1kg"
+        },
+        {
+            "name": "water",
+            "quantity": "1L"
+        },
+        {
+            "name": "sinigang mix",
+            "quantity": "1 packet"
+        }
+    ],
+    "link": "/recipes/list"
+}
+
 def recipes(request):
     return render(request, 'recipes.html', recipes_ctx)
+
+def recipe_one(request):
+    return render(request, 'recipe_one.html', recipe_one_ctx)
+

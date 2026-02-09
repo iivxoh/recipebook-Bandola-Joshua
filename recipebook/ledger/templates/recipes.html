@@ -3,12 +3,12 @@
 {% block body %}
 <ul>
     {% for recipe in recipes %}
-    <h4>{{recipe.name}}</h4>
+    <h2>{{recipe.name}}</h2>
         {% for ingredient in recipe.ingredients %}
         <li>{{ingredient.name}}: {{ingredient.quantity}}</li>
         {% endfor %}
     <p></p>
-    <a href="{{recipes.link}}">Learn the Recipe</a>
+    <a href="{{recipe.link}}">Learn the Recipe</a>
     {% endfor %}
 </ul>
 {% endblock %}
