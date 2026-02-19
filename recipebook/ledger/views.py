@@ -131,8 +131,8 @@ def recipes(request):
     return render(request, 'recipes.html', recipes_ctx)
 
 def recipe_one(request):
-    return render(request, 'recipe_one.html', recipe_one_ctx)
+    return render(request, 'recipe.html', recipe_one_ctx)
 
 def recipe_two(request):
-    return render(request, 'recipe_two.html', recipe_two_ctx)
+    return render(request, 'recipe.html', recipe_two_ctx)
 
