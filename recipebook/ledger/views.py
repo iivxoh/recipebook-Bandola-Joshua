@@ -135,4 +135,3 @@ def recipe_one(request):
 
 def recipe_two(request):
     return render(request, 'recipe.html', recipe_two_ctx)
-
