@@ -10,3 +10,5 @@ class Profile(models.Model):
             MinLengthValidator(255),
         ]
     )
+    def __str__(self):
+        return self.name
