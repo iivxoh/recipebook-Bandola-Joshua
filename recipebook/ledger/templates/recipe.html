@@ -1,17 +1,17 @@
 {% extends 'base.html' %}
 
 {% block header %}
-    <h2>Recipe Detail</h2>
+<h2>Recipe Detail</h2>
 {% endblock %}
 
 {% block body %}
-    <h3>{{name}}</h3>
-    <p><em>By: {{author}}</em></p>
-    <ul>
-        {% for ingredient in ingredients %}
-            <li>{{ingredient.ingredient.name}}: {{ingredient.quantity}}</li>
-        {% endfor %}
-        <p></p>
-    </ul>
-    <a href="/recipes/list/">Go back to recipes list</a>
+<h3>{{name}}</h3>
+<p><em>By: {{author}}</em></p>
+<ul>
+    {% for ingredient in ingredients %}
+    <li>{{ingredient.ingredient.name}}: {{ingredient.quantity}}</li>
+    {% endfor %}
+    <p></p>
+</ul>
+<a href="/recipes/list/">Go back to recipes list</a>
 {% endblock %}
