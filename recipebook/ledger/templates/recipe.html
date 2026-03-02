@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<ul>
     <h2>{{name}}</h2>
     <p><em>By: {{author}}</em></p>
+    <ul>
         {% for ingredient in ingredients %}
-        <li>{{ingredient.ingredient.name}}: {{ingredient.quantity}}</li>
+            <li>{{ingredient.ingredient.name}}: {{ingredient.quantity}}</li>
         {% endfor %}
-    <p></p>
+        <p></p>
+    </ul>
     <a href="/recipes/list/">Go back to recipes list</a>
-</ul>
 {% endblock %}
