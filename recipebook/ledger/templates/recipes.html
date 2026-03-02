@@ -3,7 +3,9 @@
 {% block body %}
 <ul>
     {% for recipe in recipes %}
-    <a href="{{recipe.get_absolute_url}}">{{recipe.name}}</a>
+    <li><a href="{{recipe.get_absolute_url}}">{{recipe.name}}</a></li>
     {% endfor %}
 </ul>
+<p></p>
+
 {% endblock %}
