@@ -7,7 +7,7 @@ class Profile(models.Model):
     name = models.CharField(max_length=50)
     bio = models.TextField(
         validators=[
-            MinLengthValidator(255),
+            MinLengthValidator(256),
         ]
     )
     def __str__(self):
