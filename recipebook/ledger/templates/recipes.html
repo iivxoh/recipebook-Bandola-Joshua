@@ -3,12 +3,7 @@
 {% block body %}
 <ul>
     {% for recipe in recipes %}
-    <h2>{{recipe.name}}</h2>
-        {% for ingredient in recipe.ingredients.all %}
-        <li>{{ingredient.ingredient.name}}: {{ingredient.quantity}}</li>
-        {% endfor %}
-    <p></p>
-    <a href="{{recipe.get_absolute_url}}">View recipe</a>
+    <a href="{{recipe.get_absolute_url}}">{{recipe.name}}</a>
     {% endfor %}
 </ul>
 {% endblock %}
