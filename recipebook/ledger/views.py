@@ -49,5 +49,8 @@ def recipe_add_image(request, pk):
     else:
         form = RecipeImageForm()
     
-    ctx = {"form": form}
+    ctx = {
+        "form": form,
+        "recipe": recipe
+    }
     return render(request, "recipe_add_image.html", ctx)

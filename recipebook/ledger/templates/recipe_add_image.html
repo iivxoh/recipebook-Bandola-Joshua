@@ -10,4 +10,6 @@
     {{ form.as_p }}
     <button type="submit">Upload</button>
 </form>
+<p></p>
+<a href="{% url 'ledger:recipe_detail' recipe.pk %}">Go back to {{ recipe.name }}</a>
 {% endblock %}
