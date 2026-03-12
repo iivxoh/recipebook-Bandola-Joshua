@@ -17,4 +17,5 @@ class RecipeAdmin(admin.ModelAdmin):
         RecipeImageInline,
     ]
 
+
 admin.site.register(Recipe, RecipeAdmin)
