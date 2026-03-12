@@ -40,6 +40,9 @@ class RecipeIngredient(models.Model):
         Recipe, on_delete=models.CASCADE, related_name="ingredients"
     )
 
+    def __str__(self):
+        return "{} of {}".format(self.quantity, self.ingredient)
+
 
 class RecipeImage(models.Model):
     recipe_image = models.ImageField(upload_to="images/", null=False)
@@ -47,3 +50,6 @@ class RecipeImage(models.Model):
     imageGroup = models.ForeignKey(
         Recipe, on_delete=models.CASCADE, related_name="images"
     )
+
+    def __str__(self):
+        return self.description

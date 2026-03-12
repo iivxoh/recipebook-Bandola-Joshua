@@ -16,5 +16,6 @@ def recipe_detail(request, pk):
         "name": recipe.name,
         "ingredients": recipe.ingredients.all(),
         "author": recipe.author.name,
+        "images": recipe.images.all(),
     }
     return render(request, "recipe.html", ctx)
