@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h2>Add Recipe</h2>
+{% endblock %}
+
+{% block body %}
+<form action="/recipes/list/" method="POST">
+{% csrf_token %}
+    <label for="recipe_name">
+        <span>Recipe Name</span>
+        <input type="text" id="recipe_name" name="recipe_name">
+    </label>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
